@@ -26,12 +26,7 @@
     "react-redux": "^7.2.6",
     "react-syntax-highlighter": "^15.4.4",
     "sass": "^1.43.4",
-    "styled-components": "^5.3.3",
-    "graphql": "latest",
-    "webpack": "latest",
-    "webpack-cli": "latest",
-    "@babel/core": "^7.0.0-0",
-    "react-is": "^16.8.6"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@emotion/cache": "latest",
