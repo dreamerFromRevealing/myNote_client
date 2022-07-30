@@ -1,9 +1,8 @@
 import styled from "styled-components"
-import {CustomScroll, TextCustomScroll} from "../../styles/styled-components/CustomScroll";
+import {TextCustomScroll} from "../../styles/styled-components/CustomScroll";
 import {Drawer, Grid} from "@mui/material";
 import LayoutContent from "./items/LayoutContent";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
 import Button from "@mui/material/Button";
 
 export const MainLayoutWrapper = styled.div`

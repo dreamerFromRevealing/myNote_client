@@ -1,4 +1,4 @@
-import React, {FC, useContext, useEffect, useState} from 'react'
+import React, {FC, useEffect, useState} from 'react'
 import Tree from "../treeFiles/Tree"
 import {
   MainLayoutHideLeftSideBtn,
@@ -8,15 +8,14 @@ import {
   MainLayoutWrapper
 } from "./styles"
 import {useQuery} from "@apollo/client"
-import arrayToTree from "array-to-tree"
 import Header from "./Header/Header"
 import Footer from "./Footer"
 import {GET_TREE} from "./queries"
-import Preloader from "./items/Preloader";
 import {drawerWidth} from './items/LayoutContent'
 import MainAlert from "../alert/MainAlert";
 import {useDispatch, useSelector} from "react-redux";
 import {createFileTree} from "../../store/fileSlice/fileSlice";
+import Preloader from "./items/Preloader";
 
 const MainLayout: FC = ({children}) => {
   const {loading, error, data} = useQuery(GET_TREE)
