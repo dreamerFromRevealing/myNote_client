@@ -6,13 +6,14 @@ import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 const MDFieldComponent = () => {
   const [input, setInput] = useState('')
 
+
   return (
     <div className={styles.wrapper}>
-      <textarea autoFocus className={styles.textarea} value={input} onChange={e => setInput(e.target.value)}/>
+      <textarea  autoFocus className={styles.textarea} value={input} onChange={e => setInput(e.target.value)}/>
       <ReactMarkdown
         className={styles.markdown}
         components={{
-          code({ inline, className, children}) {
+          code({inline, className, children}) {
             const match = /language-(\w+)/.exec(className || '')
             return !inline && match ? (
               <SyntaxHighlighter
@@ -20,7 +21,7 @@ const MDFieldComponent = () => {
                 PreTag="div"
               >
                 {String(children).replace(/\n$/, '')}
-                </SyntaxHighlighter>
+              </SyntaxHighlighter>
             ) : (
               <code className={className}>
                 {children}
@@ -30,7 +31,7 @@ const MDFieldComponent = () => {
         }}
       >
         {input}
-        </ReactMarkdown>
+      </ReactMarkdown>
     </div>
   );
 };
