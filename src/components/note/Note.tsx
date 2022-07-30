@@ -83,6 +83,20 @@ const Note = () => {
     }
   }, [state.saveDocument])
 
+
+  useEffect(() => {
+    const handleKeyDown = (e: any) => {
+      if (e.ctrlKey && e.keyCode === 83) {
+        e.preventDefault();
+        dispatch(switchSaveDocument())
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [])
+
   return (
     <NoteWrapper>
       <NoteTextArea width={mode.textarea} autoFocus value={input} onChange={e => setInput(e.target.value)}/>
